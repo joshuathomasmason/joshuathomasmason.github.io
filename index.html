@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua T. Mason | Portfolio</title>
+
+    <!-- BADASS STYLING -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: url('images/header.jpg') center/cover no-repeat;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h1, h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* About section layout */
+        .about-content {
+            overflow: hidden; /* contains floated image */
+        }
+
+        .profile-pic {
+            float: right;
+            width: 180px;
+            height: 180px;
+            margin: 0 0 1rem 1.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Resume button */
+        .resume-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.25rem;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .resume-link:hover {
+            background: #444;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 600px) {
+            .profile-pic {
+                float: none;
+                display: block;
+                margin: 0 auto 1rem auto;
+            }
+        }
+
+        /* responsive tweak */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <header>
+        <nav>
+            <h1>Joshua T. Mason</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- ABOUT SECTION HAHAHA -->
+        <section id="about">
+            <h2>About</h2>
+
+            <div class="about-content">
+
+                <img
+                    src="images/profile_picture.jpg"
+                    alt="Portrait of Joshua T. Mason"
+                    class="profile-pic"
+                >
+
+                <p>
+                    I'm a spatial data science student at the University of Oregon interested
+                    in demography, climate injustice, trail systems, and cartographic design.
+                    My work is focused on telling compelling stories through the medium of maps.
+                </p>
+
+                <a
+                    href="documents/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="resume-link"
+                >
+                    View Resume
+                </a>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION WITH ONE PROJECT LOL -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <!-- PROJECT CARD 1 -->
+            <div class="card">
+                <h3>Pittsburgh, PA Metropolitan Statistical Area Analysis</h3>
+
+                <p>
+                    Exploring demographic, economic, and spatial patterns across the
+                    Pittsburgh MSA using GIS packages and Census data in R.
+                </p>
+
+                <img src="images/project_cover.png" alt="Pittsburgh MSA map">
+
+                <p>
+                    <a href="pittsburgh.html">View Project →</a>
+                </p>
+            </div>
+
+                <p><strong>Tools:</strong> R, sf, tigris, spdep, ggplot2, crsuggest, tidyverse, tidycensus, showtext</p>
+            </div>
+
+            <!-- PROJECT CARD 2 -->
+            <div class="card">
+                <h3>Another Project</h3>
+                <p>Description of future project.</p>
+
+                <img src="images/project2.png" alt="Project image">
+                <p><a href="#">View Project</a></p>
+            </div>
+
+        </section>
+
+        <!-- CONTACT SECTION CONTACT ME AND GIVE ME MONEY -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: jmason9@uoregon.edu, joshuatmason@outlook.com</p>
+            <p>GitHub: <a href="#">github.com/joshuathomasmason</a></p>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Joshua T. Mason</p>
+    </footer>
+
+</body>
+</html>
