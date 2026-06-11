@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pittsburgh Metropolitan Statistical Area Analysis</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background-image: url("images/contour_pittsburgh.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.image-row {
+  display: flex;
+  gap: 12px;              /* space between images */
+}
+
+.image-row img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pittsburgh Metropolitan Statistical Area</h1>
+    <p>Spatial Analysis and Visualization</p>
+</header>
+
+<div class="container">
+
+    <a class="back-link" href="index.html">← Back to Portfolio</a>
+
+    <div class="section">
+        <h2>Project Overview</h2>
+
+        <p>
+            This project examines demographic and spatial patterns across the
+            Pittsburgh Metropolitan Statistical Area (MSA). Using GIS
+            packages in R, census data, and statistical analysis, I
+            examines how socioeconomic characteristics are distributed across the Pittsburgh MSA.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What is the Pittsburgh MSA?</h2>
+
+        <img src="images/pittsburgh_counties.png"
+             alt="Pittsburgh counties">
+
+        <p>
+            The Pittsburgh Metropolitan Statistical Area (MSA) is located in the
+            state of Pennsylvania, and is comprised of 7 different counties. Those
+            are Allegheny, Armstrong, Beaver, Butler, Fayette, Washington, and 
+            Westmoreland County. As of 2020, the Pittsburgh MSA has a total population
+            of 2,370,930 people.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Population by County</h2>
+
+        <img src="images/county_population.png"
+             alt="County Population">
+
+        <p>
+            Of the 7 counties in the Pittsburgh MSA, the most populous as of 2020 was
+            Allegheny County, with a total population of 1,250,578 people. In second is 
+            Westmoreland with 354,663 people, then Washington with 209,349, Butler with 
+            193,763, Fayette with 128,804, and lastly, Armstrong County with only 65,558 people.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Tracts in Pittsburgh MSA</h2>
+
+        <img src="images/pittsburgh_tracts.png"
+             alt="Pittsburgh tracts">
+
+        <p>
+            Other than counties, the primary geographic unit used in this 
+            project are Census Tracts. There are a total of 724 total
+            tracts within the Pittsburgh MSA.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Population by Tract</h2>
+
+        <img src="images/tract_population.png"
+             alt="Tract Population">
+
+        <p>
+            When examining the Pittsburgh MSA population by tract, the data does not 
+            immediately appear to be indicative of any single urban core. To better 
+            understand population, it is helpful to visualize population tracts at a 
+            scale of the city of Pittsburgh itself, as the smaller tracts are obscured 
+            in the initial scale of the full MSA.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Population in City of Pittsburgh</h2>
+
+        <div class="image-row">
+            <img src="images/pop_with_pittsburgh_border.png"
+                alt="Pittburgh Border with Population">
+            <img src="images/pittsburgh_proper_pop.png"
+                alt="Pittsburgh Proper Pop">
+        </div>
+
+        <p>
+            The city of Pittsburgh is located centrally within the Pittsburgh MSA. There are several 
+            tracts within the city with a population of roughly 5,000 people or greater. Relative to 
+            the larger tracts on the periphery of the Pittsburgh city limits, these small tracts are 
+            very densely populated. This perspective does unveil a somewhat monocentric pattern, and 
+            helps to explain why Allegheny County dwarfs the population figures of all other counties 
+            in the MSA.
+        </p>
+    </div>
+
+        <div class="section">
+        <h2>Hanberry Population Classification</h2>
+
+        <img src="images/hanberry.png"
+             alt="Hanberry ">
+
+        <p>
+            For a better understanding of population, Hanberry's (date) method of classifying urban 
+            space is helpful. This method has been adapted for the Pittsburgh MSA geography and 
+            classifies tracts into five bins based on their population density. Those classes are 
+            Exurban (0-550 people/square km), Suburban Low (550-1000 people/square km),
+            Suburban High (1000-1900 people/square km), Urban Low (1900-4500 people/square km), and Urban High (4500+ people/square km). 
+        </p>
+
+        <p>
+            The Hanberry thresholds more accurately reaveals that urban space is in fact concentrated centrally within 
+            the Pittsburgh MSA, with some significant outliers of high population density scattered about all counties on the periphery. 
+            There does appear to be a strong cluster of UrbanHigh tracts within Pittsburgh itself, which only affirms the 
+            data from the previous figures but with clearer visualization to support it.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Income in Pittsburgh MSA</h2>
+
+        <img src="images/tract_income.png"
+             alt="Tract Income">
+
+        <p>
+            Income in the Pittsburgh MSA follows an interesting pattern. The high population density clustering in Pittsburgh itself does 
+            not have the same pattern of clustering for median houshold income. Rather, the greater income values are on the immediate periphery 
+            right outside of the high density population clusters. This may indicate that lower population suburban communities are dominating the 
+            representation of people with higher income in the Pittsburgh MSA, or potentially, that very low population Exurban tracts are inhabited by 
+            a few very wealthy residents. 
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Interactive Location Quotients Map</h2>
+
+        <p>
+            Toggle race/ethnicity in the layers panel of this interactive leaftlet map. A higher location quotient value suggests a more significant level of segragation within that tract.
+        </p>
+        <iframe src="location-quotients-pittsburgh.html"
+            style = "height:500px;
+            width:920px;
+            background:#e0e0e0;
+            display:flex;
+            align-items:center;
+            justify-content:center;"></iframe>
+    </div>
+
+    <div class="section">
+        <h2>Data Sources</h2>
+
+        <ul>
+            <li>U.S. Census Bureau</li>
+            <li>American Community Survey</li>
+            <li>TIGER/Line Shapefiles</li>
+            <li>OpenStreetMap</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Joshua T. Mason</p>
+</footer>
+
+</body>
+</html>
